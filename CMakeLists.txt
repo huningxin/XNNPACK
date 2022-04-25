@@ -7,7 +7,10 @@
 # This source code is licensed under the BSD-style license found in the
 # LICENSE file in the root directory of this source tree.
 
-CMAKE_MINIMUM_REQUIRED(VERSION 3.12 FATAL_ERROR)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.15 FATAL_ERROR)
+
+# Allow MSVC runtime library flags to be selected by CMAKE_MSVC_RUNTIME_LIBRARY.
+cmake_policy(SET CMP0091 NEW)
 
 # ---[ Project and semantic versioning.
 PROJECT(XNNPACK C CXX ASM)
