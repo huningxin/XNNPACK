@@ -787,7 +787,7 @@ void GemmMicrokernelTester::Test(
       xnn_pack_qs8_gemm_xw_goi_w(/*g=*/1, n(), k(), nr(), kr(), sr(),
         b.data(), bias.data(), /*scale=*/nullptr, packed_xw.data(), /*extra_bytes=*/0, &packing_params);
     } else {
-      xnn_pack_qs8_gemm_goi_w(/*g=*/1, n(), k(), nr(), kr(), sr(),
+      xnn_pack_qs8_gemm_goi_wqu8(/*g=*/1, n(), k(), nr(), kr(), sr(),
         b.data(), bias.data(), /*scale=*/nullptr, packed_w.data(), /*extra_bytes=*/0, &packing_params);
     }
 

@@ -1582,6 +1582,11 @@ tools/xngen src/qs8-gemm/MRx16c8-avx512skx.c.in -D MR=2 -D VARIANT=LD256 -D DATA
 tools/xngen src/qs8-gemm/MRx16c8-avx512skx.c.in -D MR=3 -D VARIANT=LD256 -D DATATYPE=QS8 -D REQUANTIZATION=FP32     -o src/qs8-gemm/gen/qs8-gemm-3x16c8-minmax-fp32-avx512skx.c &
 tools/xngen src/qs8-gemm/MRx16c8-avx512skx.c.in -D MR=4 -D VARIANT=LD256 -D DATATYPE=QS8 -D REQUANTIZATION=FP32     -o src/qs8-gemm/gen/qs8-gemm-4x16c8-minmax-fp32-avx512skx.c &
 
+tools/xngen src/qs8-gemm/MRx16c4-avx512vnni.c.in -D MR=1 -D VARIANT=LD256 -D DATATYPE=QS8 -D REQUANTIZATION=FP32     -o src/qs8-gemm/gen/qs8-gemm-1x16c4-minmax-fp32-avx512vnni.c &
+tools/xngen src/qs8-gemm/MRx16c4-avx512vnni.c.in -D MR=2 -D VARIANT=LD256 -D DATATYPE=QS8 -D REQUANTIZATION=FP32     -o src/qs8-gemm/gen/qs8-gemm-2x16c4-minmax-fp32-avx512vnni.c &
+tools/xngen src/qs8-gemm/MRx16c4-avx512vnni.c.in -D MR=3 -D VARIANT=LD256 -D DATATYPE=QS8 -D REQUANTIZATION=FP32     -o src/qs8-gemm/gen/qs8-gemm-3x16c4-minmax-fp32-avx512vnni.c &
+tools/xngen src/qs8-gemm/MRx16c4-avx512vnni.c.in -D MR=4 -D VARIANT=LD256 -D DATATYPE=QS8 -D REQUANTIZATION=FP32     -o src/qs8-gemm/gen/qs8-gemm-4x16c4-minmax-fp32-avx512vnni.c &
+
 tools/xngen src/qs8-gemm/MRx16c8-avx512skx.c.in -D MR=1 -D VARIANT=LD256 -D DATATYPE=QU8 -D REQUANTIZATION=FP32     -o src/qu8-gemm/gen/qu8-gemm-1x16c8-minmax-fp32-avx512skx.c &
 tools/xngen src/qs8-gemm/MRx16c8-avx512skx.c.in -D MR=2 -D VARIANT=LD256 -D DATATYPE=QU8 -D REQUANTIZATION=FP32     -o src/qu8-gemm/gen/qu8-gemm-2x16c8-minmax-fp32-avx512skx.c &
 tools/xngen src/qs8-gemm/MRx16c8-avx512skx.c.in -D MR=3 -D VARIANT=LD256 -D DATATYPE=QU8 -D REQUANTIZATION=FP32     -o src/qu8-gemm/gen/qu8-gemm-3x16c8-minmax-fp32-avx512skx.c &

@@ -249,6 +249,26 @@ void xnn_pack_qu8_gemm_goi_w(
   } while (--g != 0);
 }
 
+void xnn_pack_qs8_gemm_goi_wqu8(
+  size_t g,
+  size_t nc,
+  size_t kc,
+  size_t nr,
+  size_t kr,
+  size_t sr,
+  const int8_t* k,
+  const int32_t* b,
+  const float* scale,
+  void* packed_weights,
+  size_t extra_bytes,
+  const struct xnn_qs8_packing_params* params)
+{
+  struct xnn_qs8_packing_params trampoline_params;
+  memcpy(&trampoline_params, params, sizeof(struct xnn_qs8_packing_params));
+  trampoline_params.input_zero_point += 128;
+  xnn_pack_qs8_gemm_goi_w(g, nc, kc, nr, kr, sr, k, b, scale, packed_weights, extra_bytes, &trampoline_params);
+}
+
 void xnn_pack_qs8_gemm_goi_w(
   size_t g,
   size_t nc,

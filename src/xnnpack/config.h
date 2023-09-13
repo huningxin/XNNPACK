@@ -44,6 +44,7 @@ struct xnn_hardware_config {
   bool use_x86_avx2;
   bool use_x86_avx512f;
   bool use_x86_avx512vbmi;
+  bool use_x86_avx512vnni;
   bool use_x86_avx512skx;
 #endif
 #if XNN_ARCH_RISCV
