@@ -1359,6 +1359,8 @@ PROD_AVX512VBMI_MICROKERNEL_SRCS = [
 ]
 
 PROD_AVX512VNNI_MICROKERNEL_SRCS = [
+    "src/qs8-gemm/gen/qs8-gemm-1x16c4-minmax-fp32-avx512vnni.c",
+    "src/qs8-gemm/gen/qs8-gemm-4x16c4-minmax-fp32-avx512vnni.c",
 ]
 
 PROD_WASM_MICROKERNEL_SRCS = [

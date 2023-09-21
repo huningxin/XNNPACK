@@ -25,6 +25,7 @@ tools/amalgamate-microkernels.py -i immintrin.h -s PROD_F16C_MICROKERNEL_SRCS -o
 tools/amalgamate-microkernels.py -i immintrin.h -s PROD_AVX512F_MICROKERNEL_SRCS -o src/amalgam/gen/avx512f.c &
 tools/amalgamate-microkernels.py -i immintrin.h -s PROD_AVX512SKX_MICROKERNEL_SRCS -o src/amalgam/gen/avx512skx.c &
 tools/amalgamate-microkernels.py -i immintrin.h -s PROD_AVX512VBMI_MICROKERNEL_SRCS -o src/amalgam/gen/avx512vbmi.c &
+tools/amalgamate-microkernels.py -i immintrin.h -s PROD_AVX512VNNI_MICROKERNEL_SRCS -o src/amalgam/gen/avx512vnni.c &
 
 # ARM/ARM64 microkernels
 tools/amalgamate-microkernels.py -i arm_acle.h -s PROD_ARMSIMD32_MICROKERNEL_SRCS -o src/amalgam/gen/armsimd32.c &
